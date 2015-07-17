@@ -15,17 +15,6 @@
     <title>{% if page.browser_title %}{{ page.browser_title }}{% elsif page.title %}{{ page.title | append: ' - ' | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
 
-
-    <!– para o Twitter Card–>
-    <meta name=”twitter:card” value=”summary”>
-    <!– para o sistema Open Graph–>
-    <meta property=”og:title” content=”{{ site.title }}” />
-    <meta property=”og:type” content=”article” />
-    <meta property=”og:url” content=”{{ site.url }}” />
-    <!-- <meta property=”og:image” content=”http://example.com/image.jpg” /> -->
-    <meta property=”og:description” content=”{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}” />
-
-
     {% include open-graph.html %}
   
     {% comment %}
