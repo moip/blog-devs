@@ -3,8 +3,7 @@ title: Blog Devs Moip
 tagline: Moip 
 email: desenvolvimento@moip.com.br
 description: > # this means to ignore newlines until "baseurl:"
-  Hi, I’m a professional UI/UX designrer and web developer. 
-  I love being minimal and creative.
+  Blog dos desenvolvedores do Moip
 baseurl: "/blog-devs" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 logourl: /assets/images/logo.png # Site logo
