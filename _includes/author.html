@@ -1,13 +1,14 @@
+{% assign author = site.data.authors[page.author] %}
 {% capture author_info %}
 <div class="author">
  {% if site.author_thumbnail && site.author_thumbnail != '' %}
-    <img 
-      src="http://www.gravatar.com/avatar/078a27ce4924c2592a3a5fd77d30788d?size=60"
-      alt="{{ site.title }}" width="60" height="60" />
+    <img
+      src="{{ author.thumbnail }}"
+      alt="{{ author.name }}" width="60" height="60" />
   {% endif %}
   <h5>Autor</h4>
   <h6>
-    Breno Oliveira
+    {{ author.name }}
   </h5>
 </div>
 {% endcapture %}{{ author_info | strip_newlines }}
