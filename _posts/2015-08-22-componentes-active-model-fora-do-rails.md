@@ -14,3 +14,9 @@ Aqui no Moip temos o hábito de escrever apps ruby puras sem qualquer framework,
 Num destes projetos, um web worker responsável por gerar relatórios, houve a necessidade de serializarmos hashes retornados por buscas do Elasticsearch em hashes no formato das linhas de um relatório específico. Para solucionar esse problema optamos por utilizar o [ActiveModel::Serializer](https://github.com/rails-api/active_model_serializers) o único porém é que nosso app não utiliza Rails então a dúvida era como integrar este componente sem o uso do Rails...
 
 Posso dizer que não foi trivial resolver isso, já que freqüentemente pode ser bem complicado encontrar gem's com documentação explicando como utilizá-las em apps não Rails, porém a parte boa é que no caso do ActiveModel::Serializer é perfeitamente possível integrá-lo à um app sem que se faça necessário o uso de Rails e neste post darei um breve exemplo de como consegui-lo :smiley:
+
+Primeiro, basta adicionar a gem ao seu GEMFILE:
+
+{% highlight ruby linenos %}
+gem 'active_model_serializers'
+{% endhighlight %}
