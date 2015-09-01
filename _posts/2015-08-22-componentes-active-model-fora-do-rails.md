@@ -15,9 +15,10 @@ Num destes projetos, um web worker responsável por gerar relatórios, houve a n
 
 Posso dizer que não foi trivial resolver isso, já que freqüentemente pode ser bem complicado encontrar gem's com documentação explicando como utilizá-las em apps não Rails, porém a parte boa é que no caso do ActiveModel::Serializer é perfeitamente possível integrá-lo à um app sem que se faça necessário o uso de Rails e neste post darei um breve exemplo de como consegui-lo :smiley:
 
-Primeiro, basta adicionar a gem ao seu GEMFILE:
+Primeiro, basta adicionar estas gem ao seu GEMFILE:
 
 {% highlight ruby linenos %}
+gem 'activesupport'
 gem 'active_model_serializers'
 {% endhighlight %}
 
@@ -28,9 +29,11 @@ class Pessoa
   # Torna esse model serializável pelo ActiveModel::Serialization
   include ActiveModel::Serialization
 
+  attr_accessor :idade, :altura, :peso
+
   # Retorna qual classe é responsável pode serializar este model
   def active_model_serializer
-    ReportsWorkers::Serializers::PessoaSerializer
+    PessoaSerializer
   end
 end
 {% endhighlight %}
@@ -42,8 +45,10 @@ class PessoaSerializer < ActiveModel::Serializer
   attributes :idade, :altura, :peso, :imc
 
   def imc
-    altura_em_metros = object.altura / 100
-    object.peso / (altura_em_metros * altura_em_metros)
+    altura_em_metros = object.altura.to_f / 100
+    object.peso.to_f / (altura_em_metros * altura_em_metros)
   end
 end
 {% endhighlight %}
+
+No exemplo acima, através do método attributes realizamos um mapeamento um-para-um, ou seja, o serializer irá procurar por um atributo altura, por exemplo, no model serializado e irá criar um nó com este mesmo nome. Também é possível criar nós customizados, com nomes ou valores que não existem no model serializado, o método imc ilustra esta possibilidade.
