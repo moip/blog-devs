@@ -67,4 +67,4 @@ puts "Como JSON => #{serializer.to_json}" #=> Como JSON => {"idade":26,"altura":
 puts "Como Hash => #{serializer.serializable_hash}" #=> Como Hash => {:idade=>26, :altura=>180, :peso=>95, :imc=>29.32}
 {% endhighlight %}
 
-Como podemos notar pelo exemplo acima, é muito fácil incluir o ActiveModel::Serializer no seu projeto e aproveitar seus benefícios com pouco código, caso queria dar uma olhada no código completo o exemplo do post está disponível neste repositório do github: <a href="http://github.com/moip/active-model-components-outside-rails" target="_blank">active-model-components-outside-rails</a> :+1:
+Como podemos notar pelo exemplo acima, é muito fácil incluir o ActiveModel::Serializer no seu projeto e aproveitar seus benefícios com pouco código, caso queria dar uma olhada no exemplo completo o código do post está disponível neste repositório do github: <a href="http://github.com/moip/active-model-components-outside-rails" target="_blank">active-model-components-outside-rails</a> :+1:
