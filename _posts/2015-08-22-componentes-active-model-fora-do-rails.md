@@ -9,7 +9,7 @@ meta_description: "Utilizando componentes do ActiveModel fora do Rails"
 browser_title: "Utilizando componentes do ActiveModel fora do Rails"
 ---
 
-Aqui no Moip temos o hábito de escrever apps ruby puras sem qualquer framework, como o Rails, Sinatra ou Grape, às vezes por que não temos necessidade das funcionalidades destes frameworks às vezes só por que é divertido :stuck_out_tongue:
+Aqui no Moip temos o hábito de escrever apps ruby puras sem qualquer framework como o Rails, Sinatra ou Grape, às vezes por que não temos necessidade das funcionalidades destes frameworks e outras só por que é divertido mesmo :stuck_out_tongue:
 
 Num destes projetos, um web worker responsável por gerar relatórios, houve a necessidade de serializarmos hashes retornados por buscas do Elasticsearch em hashes no formato das linhas de um relatório específico. Para solucionar esse problema optamos por utilizar o <a href="https://github.com/rails-api/active_model_serializers" target="_blank">ActiveModel::Serializer</a> o único porém é que nosso app não utiliza Rails então a dúvida era como integrar este componente sem o uso do Rails...
 
