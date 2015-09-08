@@ -1,6 +1,6 @@
 # Site settings
 title: Blog Devs Moip
-tagline: Moip 
+tagline: Moip
 email: desenvolvimento@moip.com.br
 description: > # this means to ignore newlines until "baseurl:"
   Blog dos desenvolvedores do Moip
@@ -14,7 +14,7 @@ theme:
   # Color for sidebar bar, links, etc
   highlight_color: "#205081" #205081" # "#272935"
   # Social media links, leave blank to ignore
-  social: 
+  social:
     github: moip
     twitter: moip
     facebook: moipbr
@@ -32,8 +32,8 @@ theme:
   # disqus_shortname: gaya-webcreate
 
   # Google Analytics/Webmaster key, leave blank to ignore
-  google_analytics_key: 
-  google_webmaster_key: 
+  google_analytics_key:
+  google_webmaster_key:
 
 # Build settings
 markdown: kramdown
@@ -47,7 +47,7 @@ paginate: 5
 port: 3000
 
 # Files/Folders to be excluded from generated _site folder
-exclude: 
+exclude:
   - CNAME
   - Gemfile
   - Rakefile
@@ -60,3 +60,6 @@ exclude:
 sass:
   sass_dir: assets/css/_sass
   style: :compressed
+
+gems:
+  - jemoji

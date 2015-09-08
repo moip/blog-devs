@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Seu e-commerce tão rápido quanto o Google usando ElasticSearch"
-category: 
+author: breno
+category:
 - elastic
 permalink: seu-ecommerce-tao-rapido-quanto-o-google-usando-elasticsearch
 #banner_image: sample-banner-image-1.jpg
@@ -23,7 +24,7 @@ Empresas como GitHub, Twitter, Google, Ebay, FourSquare, Bloomberg, The Guardian
 
 ### Colocando o ElasticSearch para funcionar
 
-A instalação deste mecanismo é bem simples. Basta fazer download da última versão<https://www.elastic.co/downloads>, descompactar e rodar bin/elasticsearch. Ou, acessar bin/elasticsearch.bat e em fazer uma requisição 
+A instalação deste mecanismo é bem simples. Basta fazer download da última versão<https://www.elastic.co/downloads>, descompactar e rodar bin/elasticsearch. Ou, acessar bin/elasticsearch.bat e em fazer uma requisição
 
 {% highlight bash linenos %}
 $ curl -XGET http://localhost:9200/
